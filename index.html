@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social IFPI</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>Minha Rede Social - Blog IFPI</h1>
+
+    <div id="listaDePostagens" class="post-container">
+        <h2>Postagens Recentes</h2>
+        <div id="feed">
+            </div>
+    </div>
+
+    <div id="visualizacaoPostagem" class="post-view hidden">
+        <button id="botaoVoltar">Voltar para a lista</button>
+        <h3 id="postTitulo"></h3>
+        <p id="postTexto"></p>
+        <small>Curtidas: <span id="postCurtidas">0</span></small>
+        <br><br>
+        <button id="botaoCurtir">👍 Curtir</button>
+        <button id="botaoEditar">✏️ Editar</button>
+        <button id="botaoExcluir" class="delete">🗑️ Excluir</button>
+
+        <div id="areaEdicao" class="hidden">
+            <textarea id="textoEdicao" rows="4"></textarea>
+            <button id="botaoSalvarEdicao">Salvar Alterações</button>
+        </div>
+
+        <hr>
+        <h4>Comentários</h4>
+        <div id="listaComentarios">
+            </div>
+
+        <div class="form-container">
+            <input id="textoNovoComentario" placeholder="Deixe seu comentário...">
+            <button id="botaoComentar">Comentar</button>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Criar Nova Postagem</h2>
+        <textarea id="textoNovaPostagem" placeholder="O que você está pensando?" rows="4"></textarea>
+        <button id="botaoPostar">Postar</button>
+    </div>
+
+</body>
+</html>
