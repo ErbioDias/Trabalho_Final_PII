@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Lato:wght@400;700&display=swap');
+
+/* Variáveis de cores para facilitar a customização */
+:root {
+    --fundo-dark: #1A202C;       /* Um azul quase preto, como o VS Code */
+    --fundo-container: #2D3748; /* Um cinza-azulado para os "cards" */
+    --texto-principal: #A0AEC0;  /* Um cinza claro para leitura confortável */
+    --texto-titulo: #48BB78;     /* Verde "terminal" para os títulos */
+    --ferias-ciano: #00BCD4;     /* Ciano vibrante para botões e links */
+    --ferias-alerta: #F44336;    /* Vermelho/Laranja para o botão de deletar */
+    --borda-foco: #48BB78;       /* Borda verde ao focar em um campo */
+
+    --fonte-mono: 'Fira Code', monospace;
+    --fonte-corpo: 'Lato', sans-serif;
+}
+
+/* Estilos gerais com o tema escuro */
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--fundo-dark);
+    color: var(--texto-principal);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* Título principal com um toque de férias */
+h1 {
+    font-family: var(--fonte-corpo);
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Um gradiente de cores do nascer do sol */
+    background: linear-gradient(45deg, var(--ferias-ciano), var(--ferias-alerta));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Títulos secundários com a fonte de código */
+h2, h3, h4 {
+    font-family: var(--fonte-mono);
+    color: var(--texto-titulo);
+    border-bottom: 1px dashed var(--fundo-container);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para os containers */
+.post-container, .post-view, .form-container {
+    background-color: var(--fundo-container);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #4A5568;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Campos de texto com cara de terminal */
+input, textarea {
+    font-family: var(--fonte-mono);
+    font-size: 1rem;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #4A5568;
+    border-radius: 4px;
+    width: calc(100% - 26px);
+    background-color: var(--fundo-dark);
+    color: var(--texto-principal);
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--borda-foco);
+}
+
+/* Botões com a cor vibrante das férias */
+button {
+    font-family: var(--fonte-mono);
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--ferias-ciano);
+    color: var(--fundo-dark);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+}
+
+button.delete {
+    background-color: var(--ferias-alerta);
+    color: white;
+}
+
+button.delete:hover {
+    box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+/* Itens da lista de postagens */
+.post-item {
+    border-left: 3px solid var(--texto-titulo);
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-left-color 0.2s;
+}
+
+.post-item:hover {
+    background-color: #4A5568;
+    border-left-color: var(--ferias-ciano);
+}
+
+.post-item p {
+    margin: 0;
+}
+
+.post-item small {
+    color: var(--texto-titulo);
+}
+
+/* Comentários */
+.comment {
+    background-color: var(--fundo-dark);
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 15px;
+    border-top: 2px solid var(--ferias-ciano);
+}
+
+.comment small {
+    color: var(--texto-titulo);
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* Utilitário para esconder elementos */
+.hidden {
+    display: none;
+}
+/* Estilo para cada comentário */
+.comment {
+    border-top: 1px dashed #ddd;
+    padding-top: 10px;
+    margin-top: 15px;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.comment small {
+    color: #666;
+    font-size: 0.8em;
+}
+
+/* Classe utilitária para esconder elementos */
+.hidden {
+    display: none;
+}
